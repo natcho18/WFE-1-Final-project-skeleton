@@ -5,11 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { WrapperComponent } from './components/wrapper/wrapper.component';
+import { SlideshowComponent } from './components/slideshow/slideshow.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WrapperComponent
+    WrapperComponent,
+    SlideshowComponent
   ],
   imports: [
     BrowserModule,

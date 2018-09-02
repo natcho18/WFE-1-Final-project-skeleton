@@ -1,0 +1,28 @@
+<h1>Top Ten Beatles Songs</h1>
+
+<div id="slider-wrapper">
+  <div id="dots">
+    <ul>
+      <li *ngFor="let img of images; let i=index"
+          [ngClass]="currentImage===i?'active':''"
+          (click)="currentImage=i"
+          ><label for="img_1" class="a"></label></li>
+      
+    </ul>
+  </div>
+  
+  <div id="arrow-left" class="nav-arrow" (click)="prevImage()">
+  </div>
+  
+  <div id="image-slider">
+    <ul>
+      <li *ngFor="let img of images; let i=index"
+          [ngClass]="bulletsClass(i)"
+          [ngStyle]="slideStyle(img)"
+          ><!--img src="{{img}}" alt="" /--></li>
+      
+    </ul>
+   
+  </div>
+  <div id="arrow-right" class="nav-arrow" (click)="nextImage()"></div>
+</div>
